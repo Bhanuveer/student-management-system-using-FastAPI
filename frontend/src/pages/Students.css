@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background-color: #f3f7fb;
+    color: #172033;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 34px 24px 48px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.header h1 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 34px;
+    line-height: 1.15;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #dbe5ef;
+    margin: 22px 0;
+}
+
+.form-section {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+    padding: 22px;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+}
+
+.form-section hr {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 4px 0;
+}
+
+.form-section input,
+.form-section select {
+    width: 100%;
+    min-height: 44px;
+    margin: 0;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.form-section input:focus,
+.form-section select:focus {
+    border-color: #0ea5a4;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(14, 165, 164, 0.13);
+}
+
+button {
+    min-height: 40px;
+    padding: 9px 14px;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #0f766e;
+    color: white;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background-color: #0d9488;
+    box-shadow: 0 10px 20px rgba(13, 148, 136, 0.22);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination h3 {
+    margin: 0 12px 0 0;
+    color: #475569;
+    font-size: 16px;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    overflow: hidden;
+    border: 1px solid #dbe5ef;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+}
+
+.student-table th,
+.student-table td {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 15px;
+    text-align: left;
+}
+
+.student-table th {
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.student-table tr:last-child td {
+    border-bottom: none;
+}
+
+.student-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.edit-btn {
+    background-color: #0284c7;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #0369a1;
+    box-shadow: 0 10px 20px rgba(2, 132, 199, 0.22);
+}
+
+.delete-btn {
+    background-color: #dc2626;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+    box-shadow: 0 10px 20px rgba(220, 38, 38, 0.22);
+}
+
+.confirm-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-color: rgba(15, 23, 42, 0.55);
+}
+
+.confirm-box {
+    width: 100%;
+    max-width: 380px;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.24);
+}
+
+.confirm-box h3 {
+    margin: 0 0 10px;
+    color: #0f172a;
+    font-size: 22px;
+}
+
+.confirm-box p {
+    margin: 0 0 20px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.confirm-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cancel-btn {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+.cancel-btn:hover {
+    background-color: #cbd5e1;
+    box-shadow: 0 10px 20px rgba(100, 116, 139, 0.18);
+}
+
+@media (max-width: 900px) {
+    .form-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .student-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        padding: 24px 16px 36px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .form-section {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .pagination h3 {
+        width: 100%;
+        margin: 0 0 8px;
+    }
+}

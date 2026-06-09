@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    color: #172033;
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background:
+        radial-gradient(circle at top left, rgba(45, 212, 191, 0.2), transparent 34%),
+        linear-gradient(135deg, #eef8ff 0%, #f7fbff 48%, #edf7f4 100%);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 390px;
+    padding: 34px;
+    background-color: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 8px;
+    box-shadow: 0 22px 55px rgba(15, 23, 42, 0.13);
+}
+
+.login-card h1 {
+    margin: 0 0 24px;
+    text-align: center;
+    color: #0f172a;
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+.login-input {
+    width: 100%;
+    padding: 13px 14px;
+    margin: 0 0 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.login-input:focus {
+    border-color: #0ea5a4;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(14, 165, 164, 0.14);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 13px 16px;
+    background: linear-gradient(135deg, #0f766e, #0284c7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(2, 132, 199, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 30px rgba(2, 132, 199, 0.32);
+}
+
+.login-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.72;
+    transform: none;
+}
+
+.login-card p {
+    margin: 0 0 16px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 26px;
+    }
+
+    .login-card h1 {
+        font-size: 25px;
+    }
+}
