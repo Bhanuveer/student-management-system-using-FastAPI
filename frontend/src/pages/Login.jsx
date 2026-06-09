@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../services/authService";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
@@ -118,6 +119,21 @@ function Login() {
                     }
 
                 </button>
+
+                <p
+                    style={{
+                        marginTop: "15px"
+                    }}
+                >
+
+                    Don't have an account?
+
+                    <Link to="/register">
+                        {" "}
+                        Register
+                    </Link>
+
+                </p>
 
             </div>
 

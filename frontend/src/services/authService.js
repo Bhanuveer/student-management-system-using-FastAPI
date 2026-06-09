@@ -30,6 +30,18 @@ export const loginUser = async (userData) => {
     return response.data;
 };
 
+export const registerUser = async (
+    userData
+) => {
+
+    const response = await axios.post(
+        `${API_URL}/auth/register`,
+        userData
+    );
+
+    return response.data;
+};
+
 export const getProfile = async () => {
 
     const token = localStorage.getItem(
